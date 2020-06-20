@@ -43,7 +43,7 @@ cdef class _${INT_TYPE}:
     cdef object memory
     cdef ${INT_TYPE}* ptr
 
-    def __cinit__(self, const unsigned char[:] memory):
+    def __cinit__(self, unsigned char[:] memory):
         if len(memory) != sizeof(${INT_TYPE}):
             raise ValueError("length must be 1")
         self.memory = memory
